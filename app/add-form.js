@@ -2,7 +2,7 @@
 
 import {useFormStatus} from 'react-dom';
 import {useFormState} from 'react-dom';
-import {createPersonSME} from '@/app/actions.ts';
+import {createPersonSME, createImage} from '@/app/actions.ts';
 
 const initialState = {};
 
@@ -25,4 +25,15 @@ function AddInterviewForm(){
             </form>
 };
 
-export {AddInterviewForm};
+function AddImageGeneratorForm(){
+    const [state, formAction] = useFormState(createImage, initialState)
+    return <form action={formAction}>
+                <label>Image Generation</label>
+                <SubmitButton />
+                <p aria-live="polite" role="status">
+                    {state?.message}
+                </p>
+           </form>
+};
+
+export {AddInterviewForm, AddImageGeneratorForm};

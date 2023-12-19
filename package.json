@@ -11,6 +11,7 @@
   "dependencies": {
     "@vercel/postgres": "^0.5.1",
     "next": "14.0.5-canary.17",
+    "openai": "^4.23.0",
     "react": "^18.3.0-canary-3e00e58a6-20231217",
     "react-dom": "^18.3.0-canary-3e00e58a6-20231217",
     "vercel": "^33.0.0",
