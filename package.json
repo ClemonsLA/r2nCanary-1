@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@vercel/blob": "^0.16.1",
     "@vercel/postgres": "^0.5.1",
     "next": "14.0.5-canary.17",
     "openai": "^4.23.0",
