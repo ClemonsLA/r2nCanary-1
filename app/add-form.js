@@ -48,7 +48,7 @@ export function AddanotherImageGeneratorForm(){
                         src={state?.message}
                         width={1024}
                         height={1024}
-                        alt="Generated Image"
+                        alt="Dalle Generated Image"
                         style={{
                             objectFit: "contain",
                             width: '100%',
