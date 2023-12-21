@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 export default function Page() {
-  return <div className="flex flex-col w-full h-full  items-center min-w-full">
+  return <div className="flex flex-grow flex-col w-full h-full items-center min-w-full">
                     <div className="p-4">
                         <h1>What&apos;s your job character?</h1>
                     </div>

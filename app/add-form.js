@@ -11,7 +11,7 @@ const initialState = {};
 function SubmitButton(){
     const { pending } = useFormStatus();
     
-    return <button type="submit" aria-disabled={pending}>Submit
+    return <button type="submit" aria-disabled={pending}>Generate
            </button>
 }
 
@@ -29,7 +29,7 @@ export function AddInterviewForm(){
 
 export function AddImageGeneratorForm(){
     const [state, formAction] = useFormState(createImage, initialState)
-    return <form action={formAction}>
+    return <form action={formAction} className="grid grid-rows-2">
                 <label>Image Generation</label>
                 <SubmitButton />
                 <p aria-live="polite" role="status">
@@ -40,15 +40,23 @@ export function AddImageGeneratorForm(){
 
 export function AddanotherImageGeneratorForm(){
     const [state, formAction] = useFormState(createImage, initialState)
-    return <form action={formAction}>
-                <label>Image Generation</label>
+    return <form action={formAction} className="grid grid-rows-2 grid-cols-2 grid-flow-col place-items-center h-[100%] w-full box-border">
+                <label>Poodle and FA Image Generation</label>
                 <SubmitButton />
-                <Image
-                    src={state?.message}
-                    width={1024}
-                    height={1024}
-                    alt="Picture of the author">
-                </Image>
+                <div className="row-span-2 w-[95%] max-w-[88%] h-[88vh] box-border relative">
+                    <Image
+                        src={state?.message}
+                        width={1024}
+                        height={1024}
+                        alt="Generated Image"
+                        style={{
+                            objectFit: "contain",
+                            width: '100%',
+                            height: 'auto',
+                                    }}
+                        sizes="100vw">
+                    </Image>
+                </div>
            </form>
 }        
 
