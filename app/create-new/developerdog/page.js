@@ -4,7 +4,7 @@ import OpenAI from "openai"
 import { useState } from 'react';
 import Image from 'next/image'
 
-export default function createDogArt() {
+export default function CreateDogArt() {
     
     const [dimageString, setDimageString] = useState({});
 
