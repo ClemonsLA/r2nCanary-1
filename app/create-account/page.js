@@ -1,7 +1,7 @@
-'use client'
+import { DynamicWidget } from "@/lib/dynamic";
 
 export default function CreateAccount(){
     return <div>
-        helloworld
-    </div>
+                <DynamicWidget />
+            </div>
 }

@@ -9,6 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@alchemy/aa-accounts": "^1.2.3",
+    "@alchemy/aa-alchemy": "^1.2.3",
+    "@alchemy/aa-core": "^1.2.3",
+    "@dynamic-labs/ethereum": "^1.0.3",
+    "@dynamic-labs/sdk-react-core": "^1.0.3",
+    "@dynamic-labs/wagmi-connector": "^1.0.3",
     "@lit-protocol/constants": "^2.2.61",
     "@lit-protocol/contracts-sdk": "^3.0.27",
     "@lit-protocol/lit-auth-client": "^3.0.27",
@@ -18,9 +24,11 @@
     "next": "14.0.5-canary.17",
     "next-auth": "^4.24.5",
     "openai": "^4.23.0",
+    "pino-pretty": "^10.3.1",
     "react": "^18.3.0-canary-3e00e58a6-20231217",
     "react-dom": "^18.3.0-canary-3e00e58a6-20231217",
     "vercel": "^33.0.0",
+    "viem": "^1.21.1",
     "zod": "^3.22.4"
   },
   "devDependencies": {
