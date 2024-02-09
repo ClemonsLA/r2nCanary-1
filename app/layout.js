@@ -1,5 +1,5 @@
-import { Inter } from 'next/font/google'
 import './globals.css'
+import { Volkhov } from 'next/font/google'
 
 import {
   DynamicContextProvider,
@@ -7,7 +7,8 @@ import {
   DynamicWagmiConnector,
 } from "../lib/dynamic";
 
-const inter = Inter({ subsets: ['latin'] })
+
+const volk = Volkhov({ subsets: ['latin'], weight: '400'})
 
 export const metadata = {
   title: 'CV 2 NFT',
@@ -25,7 +26,7 @@ export default function RootLayout({ children }) {
           ],
         }}
       >
-          <body className={inter.className}>
+          <body className={volk.className}>
             {children}
           </body>
       </DynamicContextProvider>

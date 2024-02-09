@@ -37,7 +37,7 @@ export async function createPersonSME(prevState: any, formData: FormData){
 }
 
 export async function createImage(prevState: any, formData: FormData){
-  const openai = new OpenAI({ apiKey: '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' });
+  const openai = new OpenAI({ apiKey: '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' });
   
   try {
     const image = await openai.images.generate({ 
@@ -50,51 +50,22 @@ export async function createImage(prevState: any, formData: FormData){
    
     console.log(image.data);
     console.log(typeof image.data[0]["url"])
-    
-    /*const path = join('/', "imageData.png");
-    const buffer = Buffer.from(image.data[0]["b64_json"], "base64");
-    await writeFile(path, buffer);*/
-    
-    /*const taintedArrayBuffer = await fetch(image.data[0]["url"], {cache: 'no-cache'})
-    .then(res => res.arrayBuffer())
-    
-    const newBlobFromArray = new Blob([taintedArrayBuffer], {type: "image"})
-    console.log(typeof taintedArrayBuffer);
-    
-    const blob = await put("myFirstBlob", newBlobFromArray, {
-    access: 'public',
-  });
- 
-  return NextResponse.json(blob);*/
-    
-    //change URL?
-    
-   /*const newURL = URL.createObjectURL(taintedArrayBuffer);
-   const newImage = new Image;
-   newImage.src = newURL;
-   const cleanedBlob = newImage.baseURI;
-   
-   console.log(typeof cleanedBlob)*/
-    
-    
-    /*const dalleImageBlob = await dalleImage.blob();
-    
-    const imageURL = URL.createObjectURL(dalleImageBlob);*/
-    
-    /*const response = await fetch(
-            "/api/imageGenerator/upload?filename=newURL",
-            {
-              method: 'POST',
-              body: newBlobFromArray,
-            },
-          );
-    const newBlob = (await response.json()) as PutBlobResult;*/
-   
-    
     revalidatePath('/')
-    /*return { message: `${imageURL}` }*/
+
     return { message: `${image.data[0]["url"]}` }
   } catch (e) {
     return { message: `failed to create image: ${e}`}
   }
 }
+
+export const getUserName = async (
+  previousState: string | undefined | null,
+  formData: FormData,
+) => {
+  //the previousState variable contains the last recorded value of the user's input
+  console.log("previous recorded state ", previousState);
+  //use the formData variable to get values:
+  const userName = formData.get("userName");
+
+  return userName?.toString();
+};
