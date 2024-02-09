@@ -37,7 +37,7 @@ export async function createPersonSME(prevState: any, formData: FormData){
 }
 
 export async function createImage(prevState: any, formData: FormData){
-  const openai = new OpenAI({ apiKey: '' });
+  const openai = new OpenAI({ apiKey: 'xxxxx' });
   
   try {
     const image = await openai.images.generate({ 

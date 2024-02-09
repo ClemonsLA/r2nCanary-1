@@ -10,7 +10,7 @@ export function CyberStepOne(){
         </div>
         <div className='flex flex-wrap justify-center content-center p-2 rounded-md mb-2'>
             <fieldset className="flex flex-wrap flex-row justify-between">
-                <legend className='text-center'>If you have a clearance, what kind? If not, select 'N/A':</legend>
+                <legend className='text-center'>If you have a clearance, what kind? If not, select N/A:</legend>
                 <div>
                     <input type="radio" id="nA" name="Clearance Level" value="nA" defaultChecked/>
                     <label>N/A</label>
