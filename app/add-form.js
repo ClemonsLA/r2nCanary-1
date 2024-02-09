@@ -47,11 +47,11 @@ export function AddanotherImageGeneratorForm(){
     const [state, formAction] = useFormState(createImage, initialState)
 
     const { steps, currentStepIndex, step, isFirstStep, isLastStep, next, back } = useMultiStepForm([
-    { 0: <CyberStepOne /> },
-    { 1: <CyberStepTwo /> },
-    { 2: <div>3rd Set</div> },
-    { 3: <div>4th Set</div> },
-    { 5: <div>5th Set</div> },
+    <CyberStepOne key='0'/> ,
+    <CyberStepTwo key='1'/> ,
+    <div key='2'>3rd Set</div> ,
+    <div key='3'>4th Set</div> ,
+    <div key='4'>5th Set</div> ,
     ])
     return <form action={formAction} className="grid grid-rows-4 grid-cols-2 grid-flow-col place-items-center min-h-[90vh] w-full box-border">
                 <div className="flex flex-col min-h-full w-full row-span-3 justify-between justify-center content-center">
